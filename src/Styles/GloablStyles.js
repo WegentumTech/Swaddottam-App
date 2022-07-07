@@ -107,6 +107,13 @@ const styles = StyleSheet.create({
     width: 210,
     height: 70,
   },
+  drawerBar:{
+    borderTopColor:"black",
+    borderTopWidth:2,
+    marginHorizontal:30,
+    marginBottom:10,
+    padding:10
+  }
 });
 
 export default styles;
