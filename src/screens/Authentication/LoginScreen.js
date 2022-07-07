@@ -10,8 +10,8 @@ const LoginScreen = () => {
 
 
   const handlePressLogin = () => {
-    console.log(mobileNumber.mobileNumber);
-    navigation.navigate("VerifyOTP")
+    // console.log(mobileNumber.mobileNumber);
+    navigation.navigate("VerifyOTP", {Number: mobileNumber.mobileNumber})
   };
 
   return (
@@ -22,17 +22,19 @@ const LoginScreen = () => {
         <View style={{marginTop: 100}}>
           <Text style={{marginHorizontal: 10}}>Enter Your Mobile Number</Text>
           <TextInput
+          
             onChangeText={text => {
               setMobileNumber({mobileNumber: text});
             }}
             style={styles.input}
+            defaultValue="+91 "
           />
           <TouchableOpacity onPress={handlePressLogin}>
             <Text style={styles.button}>Get OTP</Text>
           </TouchableOpacity>
         </View>
 
-        <TouchableOpacity>
+        {/* <TouchableOpacity>
           <Text
             style={{
               textAlign: 'center',
@@ -41,7 +43,7 @@ const LoginScreen = () => {
             }}>
             Skip For Now
           </Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </View>
   );
