@@ -135,10 +135,11 @@ android {
 
     defaultConfig {
         applicationId "com.swaddottamapp"
-        minSdkVersion rootProject.ext.minSdkVersion
+         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {

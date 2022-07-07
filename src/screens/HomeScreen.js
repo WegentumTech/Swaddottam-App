@@ -11,6 +11,7 @@ import OrderTypes from '../components/Home/OrderTypes';
 import RandomScrollableFoods from '../components/Home/RandomScrollableFoods';
 import OurServices from '../components/Home/OurServices';
 import RecommendedForYou from '../components/Home/RecommendedForYou';
+import Footer from '../components/Reusable/Footer';
 const HomeScreen = () => {
   return (
     <ScrollView >
@@ -25,6 +26,7 @@ const HomeScreen = () => {
       <RandomScrollableFoods />
       <OurServices />
       <RecommendedForYou />
+      <Footer/>
     </ScrollView>
   );
 };

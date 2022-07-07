@@ -86,6 +86,27 @@ const styles = StyleSheet.create({
     height: 90,
     borderRadius: 15,
   },
+  userIcon: {
+    width: 35,
+    height: 35,
+    backgroundColor: '#FDB416',
+    borderRadius: 20,
+    padding: 15,
+  },
+  LocationIcon: {
+    width: 35,
+    height: 35,
+    marginTop: 4,
+  },
+  DownIcon: {
+    width: 20,
+    height: 20,
+    marginTop: 8,
+  },
+  comingsoon: {
+    width: 210,
+    height: 70,
+  },
 });
 
 export default styles;
