@@ -3,7 +3,7 @@ import React from 'react'
 
 const TopHeader = () => {
   return (
-    <View>
+    <View style={{marginHorizontal: 10, marginTop: 10}}>
       <Text>TopHeader</Text>
     </View>
   )

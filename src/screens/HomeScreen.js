@@ -13,7 +13,7 @@ import OurServices from '../components/Home/OurServices';
 import RecommendedForYou from '../components/Home/RecommendedForYou';
 const HomeScreen = () => {
   return (
-    <ScrollView style={{marginHorizontal: 30, marginTop: 20}}>
+    <ScrollView >
       <TopHeader />
       <SearchBox />
       <Tags />
