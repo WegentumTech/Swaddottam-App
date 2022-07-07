@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     fontWeight: 'bold',
     fontSize: 20,
+    color:"black"
   },
   searchBoxUI: {
     padding: 8,
@@ -113,6 +114,13 @@ const styles = StyleSheet.create({
     marginHorizontal:30,
     marginBottom:10,
     padding:10
+  },
+  DrawerProfileIcon:{
+
+    width: 100,
+    height: 100,
+    borderRadius:100
+
   }
 });
 

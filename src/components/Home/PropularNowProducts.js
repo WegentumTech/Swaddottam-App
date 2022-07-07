@@ -1,12 +1,14 @@
 import {View, Text, Image} from 'react-native';
 import React from 'react';
 import styles from '../../Styles/GloablStyles';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const PropularNowProducts = () => {
   return (
     <View style={{marginHorizontal: 15, marginTop: 15}}>
       <View style={{flexDirection: 'row'}}>
-        <Text style={{flex: 1, fontWeight: 'bold', fontSize: 17}}>
+        <Text
+          style={{flex: 1, fontWeight: 'bold', fontSize: 17, color: 'black'}}>
           Propular Now
         </Text>
         <Text
@@ -15,8 +17,15 @@ const PropularNowProducts = () => {
             textAlign: 'right',
             fontWeight: 'bold',
             fontSize: 17,
+            color: 'black',
           }}>
           View All
+          <Entypo
+            style={{marginTop: 8}}
+            name="chevron-right"
+            size={20}
+            color="black"
+          />
         </Text>
       </View>
 
@@ -34,7 +43,14 @@ const PropularNowProducts = () => {
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
               <Text style={{fontWeight: 'bold', fontSize: 20}}>
-                CORN DO PYAZA
+                {' '}
+                <Entypo
+                  style={{marginTop: 8}}
+                  name="star"
+                  size={20}
+                  color="#314C1C"
+                />
+                {''} CORN DO PYAZA
               </Text>
               <Text style={{marginLeft: 5}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -61,7 +77,14 @@ const PropularNowProducts = () => {
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
               <Text style={{fontWeight: 'bold', fontSize: 20}}>
-                CORN DO PYAZA
+                {' '}
+                <Entypo
+                  style={{marginTop: 8}}
+                  name="star"
+                  size={20}
+                  color="#314C1C"
+                />
+                {''} CORN DO PYAZA
               </Text>
               <Text style={{marginLeft: 5}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -88,7 +111,14 @@ const PropularNowProducts = () => {
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
               <Text style={{fontWeight: 'bold', fontSize: 20}}>
-                CORN DO PYAZA
+                {' '}
+                <Entypo
+                  style={{marginTop: 8}}
+                  name="star"
+                  size={20}
+                  color="#314C1C"
+                />
+                {''} CORN DO PYAZA
               </Text>
               <Text style={{marginLeft: 5}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -115,7 +145,14 @@ const PropularNowProducts = () => {
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
               <Text style={{fontWeight: 'bold', fontSize: 20}}>
-                CORN DO PYAZA
+                {' '}
+                <Entypo
+                  style={{marginTop: 8}}
+                  name="star"
+                  size={20}
+                  color="#314C1C"
+                />
+                {''} CORN DO PYAZA
               </Text>
               <Text style={{marginLeft: 5}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting

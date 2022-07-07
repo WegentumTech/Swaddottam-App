@@ -4,37 +4,34 @@ import styles from '../../Styles/GloablStyles';
 import {useNavigation} from '@react-navigation/native';
 import PressBack from '../../components/Reusable/PressBack';
 import {useRoute} from '@react-navigation/native';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const VerifyOTP = () => {
   const [enteredOTP, setEnteredOTP] = useState('');
   const [countdown, setCountdown] = useState('');
-  const [enteredNumber, setEnteredNumber] = useState("")
+  const [enteredNumber, setEnteredNumber] = useState('');
   const navigation = useNavigation();
   const route = useRoute();
 
-
-  
   useEffect(() => {
     const UserNumber = route.params.Number;
-    console.log(UserNumber)
-    setEnteredNumber(UserNumber)
-    handleStartTimer()
+    console.log(UserNumber);
+    setEnteredNumber(UserNumber);
+    handleStartTimer();
   }, []);
-  
-  
-  const handleStartTimer = () =>{
+
+  const handleStartTimer = () => {
     var timeleft = 10;
-  
+
     var downloadTimer = setInterval(function () {
       if (timeleft <= 0) {
         clearInterval(downloadTimer);
       }
-  
+
       setCountdown(10 - timeleft);
       timeleft -= 1;
     }, 1000);
-
-  }
+  };
 
   const handleVerifyCode = () => {
     console.log(enteredOTP.enteredOTP);
@@ -71,16 +68,24 @@ const VerifyOTP = () => {
             style={styles.input}
           />
           <TouchableOpacity onPress={handleVerifyCode}>
-            <Text style={styles.button}>Verify OTP</Text>
+            <Text style={styles.button}>
+              Verify OTP{' '}
+              <Entypo
+                style={{marginTop: 8}}
+                name="chevron-right"
+                size={20}
+                color="black"
+              />
+            </Text>
           </TouchableOpacity>
 
           {countdown == 10 ? (
             <>
-              <TouchableOpacity onPress={()=>handleStartTimer()}>
+              <TouchableOpacity onPress={() => handleStartTimer()}>
                 <Text
                   style={{
                     textAlign: 'center',
-                    paddingTop:"20%",
+                    paddingTop: '20%',
                     fontWeight: 'bold',
                   }}>
                   Resend OTP

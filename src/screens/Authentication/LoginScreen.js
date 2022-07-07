@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import styles from '../../Styles/GloablStyles';
 import VerifyOTP from './VerifyOTP';
 import { useNavigation } from '@react-navigation/native';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const LoginScreen = () => {
   const [mobileNumber, setMobileNumber] = useState('');
@@ -30,7 +31,12 @@ const LoginScreen = () => {
             defaultValue="+91 "
           />
           <TouchableOpacity onPress={handlePressLogin}>
-            <Text style={styles.button}>Get OTP</Text>
+            <Text style={styles.button}>Get OTP<Entypo
+            style={{marginTop: 8}}
+            name="chevron-right"
+            size={20}
+            color="black"
+          /></Text>
           </TouchableOpacity>
         </View>
 
