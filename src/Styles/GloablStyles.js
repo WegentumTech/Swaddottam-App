@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#BAB6B6',
     borderBottomWidth: 2,
     color: 'black',
+    fontSize:20
   },
   button: {
     textAlign: 'center',
@@ -167,13 +168,30 @@ const styles = StyleSheet.create({
 
     // height: 40,
     margin: 12,
-    padding: 10,
+    // padding: 10,
     borderColor: '#BAB6B6',
     borderWidth: 2,
     color: 'black',
     borderRadius:10
 
-  }
+  },
+  simpleInput: {
+    height: 40,
+    margin: 12,
+    padding: 10,
+    borderBottomColor: '#BAB6B6',
+    borderBottomWidth: 2,
+    color: 'black',
+  },
+  EditUserProfileIcon: {
+    width: 120,
+    height: 120,
+    borderRadius: 100,
+    marginHorizontal:30,
+    marginTop:15
+  },
+  
+  
 });
 
 export default styles;

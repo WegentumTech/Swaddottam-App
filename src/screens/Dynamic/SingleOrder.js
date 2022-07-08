@@ -42,158 +42,182 @@ const SingleOrder = () => {
   };
 
   return (
-    <ScrollView>
+    <View style={{flex: 1}}>
       <PressBack />
+      <ScrollView style={{flex: 1}}>
+        <View style={{marginHorizontal: 10, marginTop: 20}}>
+          <View>
+            <View style={{marginTop: 22}}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('SingleOrderScreen')}>
+                <View style={{flexDirection: 'row'}}>
+                  <View style={{flex: 1}}>
+                    <Image
+                      style={styles.sideProduct}
+                      source={{
+                        uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
+                      }}
+                    />
+                  </View>
 
-      <View style={{marginHorizontal: 10, marginTop: 20}}>
-        <View>
-          <View style={{marginTop: 22}}>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('SingleOrderScreen')}>
-              <View style={{flexDirection: 'row'}}>
-                <View style={{flex: 1}}>
-                  <Image
-                    style={styles.sideProduct}
-                    source={{
-                      uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
-                    }}
-                  />
-                </View>
-
-                <View style={{flex: 2}}>
-                  <View style={{marginLeft: 20}}>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        fontSize: 20,
-                        color: 'black',
-                      }}>
-                      CORN DO PYAZA
-                    </Text>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        marginLeft: 5,
-                        fontSize: 15,
-                        color: 'black',
-                        marginTop: 10,
-                      }}>
-                      ₹ 150
-                    </Text>
-                    <Text
-                      style={{marginLeft: 5, color: 'black', marginTop: 10}}>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting
-                    </Text>
+                  <View style={{flex: 2}}>
+                    <View style={{marginLeft: 20}}>
+                      <Text
+                        style={{
+                          fontWeight: 'bold',
+                          fontSize: 20,
+                          color: 'black',
+                        }}>
+                        CORN DO PYAZA
+                      </Text>
+                      <Text
+                        style={{
+                          fontWeight: 'bold',
+                          marginLeft: 5,
+                          fontSize: 15,
+                          color: 'black',
+                          marginTop: 10,
+                        }}>
+                        ₹ 150
+                      </Text>
+                      <Text
+                        style={{marginLeft: 5, color: 'black', marginTop: 10}}>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting
+                      </Text>
+                    </View>
                   </View>
                 </View>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View>
-            <Text
-              style={{
-                color: 'black',
-                fontSize: 20,
-                fontWeight: 'bold',
-                marginTop: 18,
-              }}>
-              Current Status
-            </Text>
-
-            <View style={{marginTop: 15}}>
-              <StepIndicator
-                stepCount={4}
-                customStyles={customStyles}
-                currentPosition={currentStatus}
-                labels={labels}
-              />
-            </View>
-          </View>
-
-          {currentStatus === 3 ? (
-            <View>
-              <View>
-                <Text
-                  style={{
-                    marginTop: 20,
-                    color: 'black',
-                    fontWeight: 'bold',
-                    fontSize: 18,
-                  }}>
-                  Post Your Review
-                </Text>
-
-                <TextInput
-                  multiline={true}
-                  numberOfLines={5}
-                  style={styles.textArea}
-                  placeholder="Post your review here..."
-                />
-                <View style={{flexDirection: 'row', marginHorizontal: 20}}>
-                  <Entypo
-                    style={{fontSize: 22, color: 'red'}}
-                    name="star"
-                    size={20}
-                    color="black"
-                  />
-                  <Entypo
-                    style={{fontSize: 22, color: 'red'}}
-                    name="star"
-                    size={20}
-                    color="black"
-                  />
-                  <Entypo
-                    style={{fontSize: 22, color: 'red'}}
-                    name="star"
-                    size={20}
-                    color="black"
-                  />
-                  <Entypo
-                    style={{fontSize: 22, color: 'red'}}
-                    name="star"
-                    size={20}
-                    color="black"
-                  />
-
-                  <Entypo
-                    style={{fontSize: 22}}
-                    name="star-outlined"
-                    size={20}
-                    color="black"
-                  />
-                </View>
-              </View>
-
-              <TouchableOpacity>
-                <Text
-                  style={{
-                    textAlign: 'center',
-                    marginTop: 30,
-                    backgroundColor: '#FDB416',
-                    marginHorizontal: 100,
-                    padding: 10,
-                    color: 'black',
-                    borderRadius: 15,
-                    fontWeight: 'bold',
-                  }}>
-                  POST
-                </Text>
               </TouchableOpacity>
             </View>
-          ) : (
-            <View></View>
-          )}
-        </View>
 
-        <View style={{marginTop: 30}}>
-          <Text style={{fontSize: 18, fontWeight: 'bold', color: 'black'}}>
-            Foods Recommended For You
-          </Text>
-          <RandomScrollableFoods />
+            <View>
+              <Text
+                style={{
+                  color: 'black',
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  marginTop: 18,
+                }}>
+                Current Status
+              </Text>
+
+              <View style={{marginTop: 15}}>
+                <StepIndicator
+                  stepCount={4}
+                  customStyles={customStyles}
+                  currentPosition={currentStatus}
+                  labels={labels}
+                />
+              </View>
+            </View>
+
+            {currentStatus === 3 ? (
+              <View>
+                <View>
+                  <Text
+                    style={{
+                      marginTop: 20,
+                      color: 'black',
+                      fontWeight: 'bold',
+                      fontSize: 18,
+                    }}>
+                    Post Your Review
+                  </Text>
+
+                  <TextInput
+                    multiline={true}
+                    numberOfLines={5}
+                    style={styles.textArea}
+                    placeholder="Post your review here..."
+                  />
+                  <View style={{flexDirection: 'row', marginHorizontal: 20}}>
+                    <Entypo
+                      style={{fontSize: 22, color: 'red'}}
+                      name="star"
+                      size={20}
+                      color="black"
+                    />
+                    <Entypo
+                      style={{fontSize: 22, color: 'red'}}
+                      name="star"
+                      size={20}
+                      color="black"
+                    />
+                    <Entypo
+                      style={{fontSize: 22, color: 'red'}}
+                      name="star"
+                      size={20}
+                      color="black"
+                    />
+                    <Entypo
+                      style={{fontSize: 22, color: 'red'}}
+                      name="star"
+                      size={20}
+                      color="black"
+                    />
+
+                    <Entypo
+                      style={{fontSize: 22}}
+                      name="star-outlined"
+                      size={20}
+                      color="black"
+                    />
+                  </View>
+                </View>
+
+                <TouchableOpacity>
+                  <Text
+                    style={{
+                      textAlign: 'center',
+                      marginTop: 30,
+                      backgroundColor: '#FDB416',
+                      marginHorizontal: 100,
+                      padding: 10,
+                      color: 'black',
+                      borderRadius: 15,
+                      fontWeight: 'bold',
+                    }}>
+                    POST
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            ) : (
+              <View></View>
+            )}
+          </View>
+
+          <View style={{marginTop: 30}}>
+            <Text style={{fontSize: 18, fontWeight: 'bold', color: 'black'}}>
+              Foods Recommended For You
+            </Text>
+            <RandomScrollableFoods />
+          </View>
         </View>
+      </ScrollView>
+
+      <View style={{flex: 0, justifyContent: 'flex-end', marginBottom: 10}}>
+        {currentStatus !== 3 ? (
+          <>
+            <Text
+              style={{
+                textAlign: 'center',
+                color: 'black',
+                fontWeight: 'bold',
+                fontSize: 15,
+              }}>
+              Your Order Code Is #######
+            </Text>
+            <Text style={{marginHorizontal: 30, textAlign: 'center',color:"black"}}>
+              Please Share This Code With Our Delivery Boy To Confirm This
+              Order.
+            </Text>
+          </>
+        ) : (
+          <></>
+        )}
       </View>
-    </ScrollView>
+    </View>
   );
 };
 

@@ -8,6 +8,8 @@ import VerifyOTP from '../screens/Authentication/VerifyOTP';
 import DrawerNavigation from "./DrawerNavigation";
 import SearchScreen from '../screens/SearchScreen';
 import SingleOrder from '../screens/Dynamic/SingleOrder';
+import EditProfile from '../screens/EditProfile';
+import SingleProduct from '../screens/Dynamic/SingleProduct';
 const Stack = createStackNavigator();
 
 function StackNavigation() {
@@ -20,6 +22,8 @@ function StackNavigation() {
       <Stack.Screen name="Home" component={DrawerNavigation} />
       <Stack.Screen name="SearchScreen" component={SearchScreen} />
       <Stack.Screen name="SingleOrderScreen" component={SingleOrder} />
+      <Stack.Screen name="EditProfile" component={EditProfile} />
+      <Stack.Screen name="SingleProductScreen" component={SingleProduct} />
     </Stack.Navigator>
   );
 }

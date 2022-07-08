@@ -59,7 +59,7 @@ const Profile = () => {
             marginBottom: 30,
             flex: 1,
           }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.navigate("EditProfile")} >
             <Text
               style={{
                 backgroundColor: '#FDB416',

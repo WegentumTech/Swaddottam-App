@@ -31,6 +31,11 @@ const VerifyOTP = () => {
     handleStartTimer();
   }, []);
 
+
+
+
+
+  
   const handleStartTimer = () => {
     var timeleft = 10;
 
@@ -43,6 +48,13 @@ const VerifyOTP = () => {
       timeleft -= 1;
     }, 1000);
   };
+
+
+
+
+
+  
+  
 
   const handleVerifyCode = () => {
     console.log(pin1.pin1, pin2.pin2, pin3.pin3, pin4.pin4);
