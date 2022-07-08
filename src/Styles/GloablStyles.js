@@ -1,5 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {color} from 'react-native-reanimated';
 
 const styles = StyleSheet.create({
   tinyLogo: {
@@ -10,8 +11,9 @@ const styles = StyleSheet.create({
   },
   splashScreenBottomVersion: {
     textAlign: 'center',
-    marginVertical: 300,
     fontWeight: 'bold',
+    color: 'black',
+    marginVertical: 300,
   },
   input: {
     height: 40,
@@ -19,6 +21,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomColor: '#BAB6B6',
     borderBottomWidth: 2,
+    color: 'black',
   },
   button: {
     textAlign: 'center',
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     fontWeight: 'bold',
     fontSize: 20,
-    color:"black"
+    color: 'black',
   },
   searchBoxUI: {
     padding: 8,
@@ -38,6 +41,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     padding: 5,
+    color: 'black',
   },
   tags: {
     borderColor: '#D9D9D9',
@@ -46,6 +50,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 5,
     margin: 3,
+    color: 'black',
   },
   bannerImage: {
     width: '100%',
@@ -108,18 +113,65 @@ const styles = StyleSheet.create({
     width: 210,
     height: 70,
   },
-  drawerBar:{
-    borderTopColor:"black",
-    borderTopWidth:2,
-    marginHorizontal:30,
-    marginBottom:10,
-    padding:10
+  drawerBar: {
+    borderTopColor: 'black',
+    borderTopWidth: 2,
+    marginHorizontal: 30,
+    marginBottom: 10,
+    padding: 10,
   },
-  DrawerProfileIcon:{
-
+  DrawerProfileIcon: {
     width: 100,
     height: 100,
-    borderRadius:100
+    borderRadius: 100,
+  },
+  searchInputBox: {
+    height: 40,
+    margin: 12,
+    padding: 10,
+    borderColor: 'black',
+    borderWidth: 1,
+    borderRadius: 10,
+    color: 'black',
+  },
+  HeadingTextColor: {
+    color: 'black',
+  },
+  OtpInput: {
+    height: 40,
+    margin: 12,
+    padding: 10,
+    borderColor: '#BAB6B6',
+    borderWidth: 2,
+    color: 'black',
+    width: 30,
+    backgroundColor:"#f5f4f2",
+    borderRadius:5
+
+  },
+  image:{
+    flex: 1,
+    justifyContent: "center"
+  },
+  UserProfileIcon: {
+    width: 120,
+    height: 120,
+    borderRadius: 100,
+    position:"absolute",
+    top:130,
+    marginHorizontal:10
+  },
+
+
+  textArea:{
+
+    // height: 40,
+    margin: 12,
+    padding: 10,
+    borderColor: '#BAB6B6',
+    borderWidth: 2,
+    color: 'black',
+    borderRadius:10
 
   }
 });

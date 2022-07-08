@@ -15,6 +15,7 @@ const Coins = () => {
         <Text style={{flex: 1}}>
           <MaterialCommunityIcons name="bitcoin" size={55} color="white" />
         </Text>
+
         <Text
           style={{
             flex: 1,
@@ -28,9 +29,9 @@ const Coins = () => {
         <Text
           style={{
             flex: 1,
-            fontSize: 15,
+            fontSize: 18,
             fontWeight: 'bold',
-            marginTop: 15,
+            marginTop: 17,
             color: 'white',
           }}>
           Redeem

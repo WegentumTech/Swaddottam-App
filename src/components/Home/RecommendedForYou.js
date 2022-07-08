@@ -6,7 +6,7 @@ const RecommendedForYou = () => {
   return (
     <View style={{marginHorizontal: 15, marginTop: 15}}>
       <View style={{flexDirection: 'row'}}>
-        <Text style={{flex: 1, fontWeight: 'bold', fontSize: 17}}>
+        <Text style={{flex: 1, fontWeight: 'bold', fontSize: 17,color:"black"}}>
           Recommended For You
         </Text>
       </View>
@@ -24,14 +24,14 @@ const RecommendedForYou = () => {
 
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              <Text style={{fontWeight: 'bold', fontSize: 20,color:"black"}}>
                 CORN DO PYAZA
               </Text>
-              <Text style={{marginLeft: 5}}>
+              <Text style={{marginLeft: 5,color:"black"}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard
               </Text>
-              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18}}>
+              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18,color:"black"}}>
                 ₹200
               </Text>
             </View>
@@ -51,14 +51,14 @@ const RecommendedForYou = () => {
 
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              <Text style={{fontWeight: 'bold', fontSize: 20,color:"black"}}>
                 CORN DO PYAZA
               </Text>
-              <Text style={{marginLeft: 5}}>
+              <Text style={{marginLeft: 5,color:"black"}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard
               </Text>
-              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18}}>
+              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18,color:"black"}}>
                 ₹200
               </Text>
             </View>
@@ -78,14 +78,14 @@ const RecommendedForYou = () => {
 
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              <Text style={{fontWeight: 'bold', fontSize: 20,color:"black"}}>
                 CORN DO PYAZA
               </Text>
-              <Text style={{marginLeft: 5}}>
+              <Text style={{marginLeft: 5,color:"black"}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard
               </Text>
-              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18}}>
+              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18,color:"black"}}>
                 ₹200
               </Text>
             </View>
@@ -105,14 +105,14 @@ const RecommendedForYou = () => {
 
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              <Text style={{fontWeight: 'bold', fontSize: 20,color:"black"}}>
                 CORN DO PYAZA
               </Text>
-              <Text style={{marginLeft: 5}}>
+              <Text style={{marginLeft: 5,color:"black"}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard
               </Text>
-              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18}}>
+              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18,color:"black"}}>
                 ₹200
               </Text>
             </View>

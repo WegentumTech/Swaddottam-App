@@ -19,7 +19,7 @@ const UserProfile = () => {
           </View>
 
           <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>
-            UserName
+            Hi, User
           </Text>
           <Text style={{color: 'black'}}>6393344720</Text>
         </View>

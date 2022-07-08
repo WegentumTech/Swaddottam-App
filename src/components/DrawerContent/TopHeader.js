@@ -7,23 +7,13 @@ import {useNavigation} from '@react-navigation/native';
 const TopHeader = () => {
   const navigation = useNavigation();
 
-
-  const handlePressBack = () =>{
+  const handlePressBack = () => {
     navigation.closeDrawer();
-  }
-
-
-
-
+  };
 
   return (
     <View style={{marginHorizontal: 20, flexDirection: 'row', marginTop: 20}}>
-      <AntDesign
-        style={{flex: 1}}
-        name="arrowleft"
-        size={24}
-        color="black"
-      />
+      <AntDesign style={{flex: 1}} name="arrowleft" size={24} color="black" />
       <View style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
         <FontAwesome style={{flex: 1}} name="bell" size={24} color="black" />
       </View>

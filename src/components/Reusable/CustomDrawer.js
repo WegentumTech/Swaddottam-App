@@ -18,6 +18,11 @@ const CustomDrawer = props => {
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
+
+
+
+
+
       <View style={styles.drawerBar}>
         <Text style={{textAlign: 'center',fontWeight:"bold"}}>version 1.0.0</Text>
       </View>

@@ -15,10 +15,10 @@ const TopHeader = () => {
         <Ionicons name="location-sharp" size={34} color="#FDB416" />
 
         <View>
-          <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+          <Text style={{fontSize: 18, fontWeight: 'bold',color:"black"}}>
             Rathyarta Crossing..
           </Text>
-          <Text>Jahumandi</Text>
+          <Text style={styles.HeadingTextColor} >Jahumandi</Text>
         </View>
         <AntDesign
           style={{marginTop: 8}}

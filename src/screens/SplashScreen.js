@@ -19,7 +19,7 @@ const SplashScreen = () => {
         style={styles.tinyLogo}
         source={require('../assets/img/SplashLogo.png')}
       />
-      <Text style={styles.splashScreenBottomVersion} >version 1.0.0</Text>
+      
     </View>
   );
 };

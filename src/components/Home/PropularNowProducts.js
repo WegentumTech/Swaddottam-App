@@ -42,7 +42,7 @@ const PropularNowProducts = () => {
 
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              <Text style={{fontWeight: 'bold', fontSize: 20,color:"black"}}>
                 {' '}
                 <Entypo
                   style={{marginTop: 8}}
@@ -52,11 +52,11 @@ const PropularNowProducts = () => {
                 />
                 {''} CORN DO PYAZA
               </Text>
-              <Text style={{marginLeft: 5}}>
+              <Text style={{marginLeft: 5,color:"black"}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard
               </Text>
-              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18}}>
+              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18,color:"black"}}>
                 ₹200
               </Text>
             </View>
@@ -76,7 +76,7 @@ const PropularNowProducts = () => {
 
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              <Text style={{fontWeight: 'bold', fontSize: 20,color:"black"}}>
                 {' '}
                 <Entypo
                   style={{marginTop: 8}}
@@ -86,11 +86,11 @@ const PropularNowProducts = () => {
                 />
                 {''} CORN DO PYAZA
               </Text>
-              <Text style={{marginLeft: 5}}>
+              <Text style={{marginLeft: 5,color:"black"}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard
               </Text>
-              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18}}>
+              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18,color:"black"}}>
                 ₹200
               </Text>
             </View>
@@ -110,7 +110,7 @@ const PropularNowProducts = () => {
 
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              <Text style={{fontWeight: 'bold', fontSize: 20,color:"black"}}>
                 {' '}
                 <Entypo
                   style={{marginTop: 8}}
@@ -120,11 +120,11 @@ const PropularNowProducts = () => {
                 />
                 {''} CORN DO PYAZA
               </Text>
-              <Text style={{marginLeft: 5}}>
+              <Text style={{marginLeft: 5,color:"black"}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard
               </Text>
-              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18}}>
+              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18,color:"black"}}>
                 ₹200
               </Text>
             </View>
@@ -144,7 +144,7 @@ const PropularNowProducts = () => {
 
           <View style={{flex: 2}}>
             <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20}}>
+              <Text style={{fontWeight: 'bold', fontSize: 20,color:"black"}}>
                 {' '}
                 <Entypo
                   style={{marginTop: 8}}
@@ -154,11 +154,11 @@ const PropularNowProducts = () => {
                 />
                 {''} CORN DO PYAZA
               </Text>
-              <Text style={{marginLeft: 5}}>
+              <Text style={{marginLeft: 5,color:"black"}}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard
               </Text>
-              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18}}>
+              <Text style={{fontWeight: 'bold', marginLeft: 5, fontSize: 18,color:"black"}}>
                 ₹200
               </Text>
             </View>

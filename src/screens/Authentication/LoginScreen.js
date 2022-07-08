@@ -18,17 +18,18 @@ const LoginScreen = () => {
   return (
     <View>
       <View style={{marginHorizontal: 30, marginTop: 50}}>
-        <Text style={{fontSize: 30, fontWeight: 'bold'}}>Login</Text>
+        <Text style={{fontSize: 30, fontWeight: 'bold',color:"black"}}>Login</Text>
 
         <View style={{marginTop: 100}}>
-          <Text style={{marginHorizontal: 10}}>Enter Your Mobile Number</Text>
+          <Text style={{marginHorizontal: 10,color:"black"}}>Enter Your Mobile Number</Text>
           <TextInput
-          
+          keyboardType='number-pad'
             onChangeText={text => {
               setMobileNumber({mobileNumber: text});
             }}
             style={styles.input}
             defaultValue="+91 "
+            maxLength={14}
           />
           <TouchableOpacity onPress={handlePressLogin}>
             <Text style={styles.button}>Get OTP<Entypo
