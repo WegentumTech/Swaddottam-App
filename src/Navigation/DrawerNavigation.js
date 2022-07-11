@@ -70,15 +70,6 @@ function DrawerNavigation(props) {
       />
 
       <Drawer.Screen
-        name="Offers"
-        component={Offers}
-        options={{
-          drawerIcon: ({color}) => (
-            <FontAwesome name="home" size={24} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
         name="Saved Address"
         component={SavedAddress}
         options={{
@@ -102,6 +93,15 @@ function DrawerNavigation(props) {
         options={{
           drawerIcon: ({color}) => (
             <MaterialIcons name="help-center" size={24} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Refer & Earn"
+        component={Offers}
+        options={{
+          drawerIcon: ({color}) => (
+            <FontAwesome name="slideshare" size={24} color={color} />
           ),
         }}
       />

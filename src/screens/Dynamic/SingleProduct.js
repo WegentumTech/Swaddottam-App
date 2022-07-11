@@ -1,11 +1,24 @@
-import {View, Text, Image} from 'react-native';
-import React from 'react';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+  TextInput,
+  Alert,
+} from 'react-native';
+import React, {useState} from 'react';
 import styles from '../../Styles/GloablStyles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import {useNavigation} from '@react-navigation/native';
+import RandomScrollableFoods from '../../components/Home/RandomScrollableFoods';
 
 const SingleProduct = () => {
+  const navigation = useNavigation();
+  const [increasenUMBER, setIncreasenUMBER] = useState(1);
+
   return (
-    <View>
+    <ScrollView>
       <View>
         <Image
           style={{width: '100%', height: 200}}
@@ -15,6 +28,7 @@ const SingleProduct = () => {
         />
 
         <AntDesign
+          onPress={() => navigation.goBack()}
           style={{
             position: 'absolute',
             top: 20,
@@ -46,7 +60,118 @@ const SingleProduct = () => {
           item. this is some desciption of this item
         </Text>
       </View>
-    </View>
+
+      <View style={{marginTop: 20, flexDirection: 'row', marginHorizontal: 20}}>
+        <View style={{flexDirection: 'row', flex: 1}}>
+          {increasenUMBER <= 1 ? (
+            <>
+              <Text
+                onPress={() =>
+                  Alert.alert('Wait...', 'Please Add Atleast One Quantity')
+                }
+                style={{
+                  padding: 8,
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  backgroundColor: '#757272',
+                  color: 'white',
+                }}>
+                -
+              </Text>
+            </>
+          ) : (
+            <>
+              <TouchableOpacity
+                onPress={() => setIncreasenUMBER(increasenUMBER - 1)}>
+                <Text
+                  style={{
+                    padding: 8,
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                    backgroundColor: '#757272',
+                    color: 'white',
+                  }}>
+                  -
+                </Text>
+              </TouchableOpacity>
+            </>
+          )}
+
+          <Text
+            style={{
+              padding: 8,
+              fontSize: 20,
+              fontWeight: 'bold',
+              backgroundColor: '#D9D9D9',
+              color: 'black',
+            }}>
+            {increasenUMBER}
+          </Text>
+
+          <TouchableOpacity
+            onPress={() => setIncreasenUMBER(increasenUMBER + 1)}>
+            <Text
+              style={{
+                padding: 8,
+                fontSize: 20,
+                fontWeight: 'bold',
+                backgroundColor: '#757272',
+                color: 'white',
+              }}>
+              +
+            </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{flex: 1}}>
+          <TouchableOpacity>
+            <Text
+              style={{
+                alignSelf: 'flex-end',
+                fontWeight: 'bold',
+                fontSize: 20,
+                padding: 8,
+                backgroundColor: '#757272',
+                borderRadius: 5,
+                color: 'white',
+              }}>
+              Add To Cart
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
+      <View style={{marginHorizontal: 20, flexDirection: 'row', marginTop: 30}}>
+        <TextInput
+          keyboardType="numeric"
+          style={styles.CheckZipCode}
+          placeholder="check availability at eg:221010"
+          placeholderTextColor="#BAB6B6"
+        />
+        <TouchableOpacity>
+          <Text
+            style={{
+              flex: 1,
+              backgroundColor: '#FDB416',
+              borderBottomRightRadius: 5,
+              borderTopRightRadius: 5,
+              padding: 10,
+              color: 'black',
+              fontWeight: 'bold',
+              fontSize: 14,
+            }}>
+            Check
+          </Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={{marginHorizontal: 8, marginTop: 20}}>
+        <Text style={{fontSize: 18, fontWeight: 'bold', color: 'black'}}>
+          RELATED PRODUCTS
+        </Text>
+
+        <RandomScrollableFoods />
+      </View>
+    </ScrollView>
   );
 };
 

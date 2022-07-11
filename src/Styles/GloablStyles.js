@@ -190,6 +190,41 @@ const styles = StyleSheet.create({
     marginHorizontal:30,
     marginTop:15
   },
+  CheckZipCode:{
+    height: 40,
+    borderColor: '#BAB6B6',
+    borderWidth: 2,
+    color: 'black',
+    fontSize:15,
+    flex:5,
+    borderTopLeftRadius:8,
+    borderBottomLeftRadius:8
+    
+  },
+  menuItems: {
+    width: 115,
+    height: 90,
+    borderRadius: 15,
+    margin: 3,
+  },
+  mainMenu:{
+    margin:2,
+    marginTop:20
+  },
+  helpandsupportimage: {
+    width: '100%',
+    height: 100,
+    marginHorizontal: 5,
+  },
+
+  referandearnimage: {
+    width: "30%",
+    height: 120,
+    position:"absolute",
+    alignSelf:"flex-end",
+    marginTop:35,
+    right:15
+  },
   
   
 });

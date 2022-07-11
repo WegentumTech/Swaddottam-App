@@ -14,7 +14,7 @@ const PressBackWithTitle = props => {
         marginHorizontal: 25,
         marginBottom: 10,
       }}>
-      <Text style={{flex: 1}}>
+      <Text >
         <AntDesign
           onPress={() => navigation.goBack()}
           style={{marginTop: 8}}
@@ -23,7 +23,7 @@ const PressBackWithTitle = props => {
           color="black"
         />
       </Text>
-      <Text style={{flex: 3, fontSize: 19, fontWeight: 'bold', color: 'black'}}>
+      <Text style={{flex: 1, fontSize: 19, fontWeight: 'bold', color: 'black',textAlign:"center"}}>
         {'   '}
         {props.title}
       </Text>
