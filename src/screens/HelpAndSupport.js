@@ -9,9 +9,7 @@ const HelpAndSupport = () => {
       <View>
         <Image
           style={styles.helpandsupportimage}
-          source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
-          }}
+          source={require('../assets/img/customersupport.png')}
         />
 
         <Text
@@ -20,15 +18,20 @@ const HelpAndSupport = () => {
             marginTop: 20,
             fontWeight: 'bold',
             fontSize: 20,
+            color: 'black',
           }}>
           How Can We Help You ?
         </Text>
 
-        <Text style={{marginHorizontal: 20, marginTop: 10}}>
+        <Text style={{marginHorizontal: 20, marginTop: 10, color: 'black'}}>
           It looks like you are experiencing problems with our app. We are here
           to help so please get in touch with us
         </Text>
       </View>
+
+      <Text style={{color: 'black', textAlign: 'center', marginTop: 10}}>
+        Just Mail Us On This Email-ID : <Text style={{fontWeight:"bold"}} >something@gmail.com</Text>
+      </Text>
     </View>
   );
 };

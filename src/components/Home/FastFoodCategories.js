@@ -1,9 +1,12 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import styles from '../../Styles/GloablStyles';
 import Entypo from 'react-native-vector-icons/Entypo';
+import {useNavigation} from '@react-navigation/native';
 
 const FastFoodCategories = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={{marginHorizontal: 15, marginTop: 10}}>
       <View style={{flexDirection: 'row'}}>
@@ -37,38 +40,62 @@ const FastFoodCategories = () => {
           justifyContent: 'center',
           marginTop: 15,
         }}>
-        <Image
-          style={styles.fastFoodProducts}
-          source={require('../../assets/img/pizza.png')}
-        />
-        <Image
-          style={styles.fastFoodProducts}
-          source={require('../../assets/img/pizza.png')}
-        />
-        <Image
-          style={styles.fastFoodProducts}
-          source={require('../../assets/img/pizza.png')}
-        />
-        <Image
-          style={styles.fastFoodProducts}
-          source={require('../../assets/img/pizza.png')}
-        />
-        <Image
-          style={styles.fastFoodProducts}
-          source={require('../../assets/img/pizza.png')}
-        />
-        <Image
-          style={styles.fastFoodProducts}
-          source={require('../../assets/img/pizza.png')}
-        />
-        <Image
-          style={styles.fastFoodProducts}
-          source={require('../../assets/img/pizza.png')}
-        />
-        <Image
-          style={styles.fastFoodProducts}
-          source={require('../../assets/img/pizza.png')}
-        />
+        <TouchableOpacity
+          onPress={() => navigation.navigate('EatWhatMakesYouHappy')}>
+          <Image
+            style={styles.fastFoodProducts}
+            source={require('../../assets/img/pizza.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('EatWhatMakesYouHappy')}>
+          <Image
+            style={styles.fastFoodProducts}
+            source={require('../../assets/img/pizza.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('EatWhatMakesYouHappy')}>
+          <Image
+            style={styles.fastFoodProducts}
+            source={require('../../assets/img/pizza.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('EatWhatMakesYouHappy')}>
+          <Image
+            style={styles.fastFoodProducts}
+            source={require('../../assets/img/pizza.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('EatWhatMakesYouHappy')}>
+          <Image
+            style={styles.fastFoodProducts}
+            source={require('../../assets/img/pizza.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('EatWhatMakesYouHappy')}>
+          <Image
+            style={styles.fastFoodProducts}
+            source={require('../../assets/img/pizza.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('EatWhatMakesYouHappy')}>
+          <Image
+            style={styles.fastFoodProducts}
+            source={require('../../assets/img/pizza.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('EatWhatMakesYouHappy')}>
+          <Image
+            style={styles.fastFoodProducts}
+            source={require('../../assets/img/pizza.png')}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

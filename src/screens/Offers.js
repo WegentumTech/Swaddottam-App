@@ -1,17 +1,18 @@
-import {View, Text, Image} from 'react-native';
-import React from 'react';
+import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
 import styles from '../Styles/GloablStyles';
 import Zocial from 'react-native-vector-icons/Zocial';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
+import Accordion from '../components/ReferAndEarn/Accordion';
 
 const Offers = () => {
   const navigation = useNavigation();
 
   return (
-    <View>
+    <ScrollView>
       <View style={{backgroundColor: '#FDB416', padding: 10, height: 200}}>
         <AntDesign
           onPress={() => navigation.goBack()}
@@ -143,7 +144,9 @@ const Offers = () => {
           </Text>
         </View>
       </View>
-    </View>
+
+      <Accordion />
+    </ScrollView>
   );
 };
 

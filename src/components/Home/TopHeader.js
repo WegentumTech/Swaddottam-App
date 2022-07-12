@@ -11,22 +11,26 @@ const TopHeader = () => {
 
   return (
     <View style={{marginHorizontal: 10, marginTop: 10, flexDirection: 'row'}}>
-      <View style={{flex: 1, flexDirection: 'row'}}>
-        <Ionicons name="location-sharp" size={34} color="#FDB416" />
+      <TouchableOpacity
+        activeOpacity={1}
+        onPress={() => navigation.navigate('LocationSelect')}>
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <Ionicons name="location-sharp" size={34} color="#FDB416" />
 
-        <View>
-          <Text style={{fontSize: 18, fontWeight: 'bold',color:"black"}}>
-            Rathyarta Crossing..
-          </Text>
-          <Text style={styles.HeadingTextColor} >Jahumandi</Text>
+          <View>
+            <Text style={{fontSize: 18, fontWeight: 'bold', color: 'black'}}>
+              Rathyarta Crossing..
+            </Text>
+            <Text style={styles.HeadingTextColor}>Jahumandi</Text>
+          </View>
+          <AntDesign
+            style={{marginTop: 8}}
+            name="down"
+            size={20}
+            color="#FDB416"
+          />
         </View>
-        <AntDesign
-          style={{marginTop: 8}}
-          name="down"
-          size={20}
-          color="#FDB416"
-        />
-      </View>
+      </TouchableOpacity>
 
       <View style={{flex: 1, alignItems: 'flex-end'}}>
         <TouchableOpacity onPress={() => navigation.openDrawer()}>

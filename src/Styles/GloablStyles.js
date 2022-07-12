@@ -212,9 +212,11 @@ const styles = StyleSheet.create({
     marginTop:20
   },
   helpandsupportimage: {
-    width: '100%',
-    height: 100,
+    width: 240,
+    height: 230,
     marginHorizontal: 5,
+    alignSelf:"center",
+    marginTop:45
   },
 
   referandearnimage: {

@@ -15,6 +15,12 @@ import EditProfile from '../screens/EditProfile';
 import SingleProduct from '../screens/Dynamic/SingleProduct';
 import SingleMenuItems from '../screens/Dynamic/SingleMenuItems';
 import Notifications from '../screens/Notifications';
+import PropularNow from '../screens/PopularNow';
+import Categories from '../screens/Dynamic/Categories';
+import EatWhatMakesYouHappy from '../screens/EatWhatMakesYouHappy';
+import LocationSelect from '../screens/LocationSelect';
+import Cart from '../screens/Cart';
+import Checkout from '../screens/Checkout';
 const Stack = createStackNavigator();
 
 function StackNavigation() {
@@ -35,6 +41,12 @@ function StackNavigation() {
       <Stack.Screen name="SingleProductScreen" component={SingleProduct} />
       <Stack.Screen name="SingleMenuItem" component={SingleMenuItems} />
       <Stack.Screen name="Notifications" component={Notifications} />
+      <Stack.Screen name="PropularNow" component={PropularNow} />
+      <Stack.Screen name="Categories" component={Categories} />
+      <Stack.Screen name="EatWhatMakesYouHappy" component={EatWhatMakesYouHappy} />
+      <Stack.Screen name="LocationSelect" component={LocationSelect} />
+      <Stack.Screen name="Cart" component={Cart} />
+      <Stack.Screen name="Checkout" component={Checkout} />
     </Stack.Navigator>
   );
 }

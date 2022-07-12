@@ -123,7 +123,7 @@ const SingleProduct = () => {
           </TouchableOpacity>
         </View>
         <View style={{flex: 1}}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>navigation.navigate("Cart")} >
             <Text
               style={{
                 alignSelf: 'flex-end',

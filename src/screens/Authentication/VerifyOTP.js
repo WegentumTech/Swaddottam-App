@@ -8,7 +8,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 
 const VerifyOTP = () => {
   const [enteredOTP, setEnteredOTP] = useState('');
-  const [countdown, setCountdown] = useState('');
+  const [countdown, setCountdown] = useState(10);
   const [enteredNumber, setEnteredNumber] = useState('');
 
   const [pin1, setPin1] = useState('');
@@ -37,14 +37,15 @@ const VerifyOTP = () => {
 
   
   const handleStartTimer = () => {
-    var timeleft = 10;
+    var timeleft = 9;
 
     var downloadTimer = setInterval(function () {
       if (timeleft <= 0) {
+        console.log("now it will be close")
         clearInterval(downloadTimer);
       }
 
-      setCountdown(10 - timeleft);
+      setCountdown(1 + timeleft);
       timeleft -= 1;
     }, 1000);
   };
@@ -77,7 +78,7 @@ const VerifyOTP = () => {
         </Text>
 
         <View style={{marginTop: 50}}>
-          {countdown == 10 ? (
+          {countdown == 1 ? (
             <></>
           ) : (
             <>
@@ -162,7 +163,7 @@ const VerifyOTP = () => {
             </Text>
           </TouchableOpacity>
 
-          {countdown == 10 ? (
+          {countdown == 1 ? (
             <>
               <TouchableOpacity onPress={() => handleStartTimer()}>
                 <Text

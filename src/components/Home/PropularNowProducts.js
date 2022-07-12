@@ -8,28 +8,31 @@ const PropularNowProducts = () => {
   const navigation = useNavigation();
 
   return (
+    
     <View style={{marginHorizontal: 15, marginTop: 15}}>
       <View style={{flexDirection: 'row'}}>
         <Text
           style={{flex: 1, fontWeight: 'bold', fontSize: 17, color: 'black'}}>
           Propular Now
         </Text>
-        <Text
-          style={{
-            flex: 1,
-            textAlign: 'right',
-            fontWeight: 'bold',
-            fontSize: 17,
-            color: 'black',
-          }}>
-          View All
-          <Entypo
-            style={{marginTop: 8}}
-            name="chevron-right"
-            size={20}
-            color="black"
-          />
-        </Text>
+        <TouchableOpacity onPress={() => navigation.navigate('PropularNow')}>
+          <Text
+            style={{
+              flex: 1,
+              textAlign: 'right',
+              fontWeight: 'bold',
+              fontSize: 17,
+              color: 'black',
+            }}>
+            View All
+            <Entypo
+              style={{marginTop: 8}}
+              name="chevron-right"
+              size={20}
+              color="black"
+            />
+          </Text>
+        </TouchableOpacity>
       </View>
       <TouchableOpacity
         onPress={() => navigation.navigate('SingleProductScreen')}>
