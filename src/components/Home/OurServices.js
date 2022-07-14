@@ -4,7 +4,7 @@ import styles from '../../Styles/GloablStyles';
 
 const OurServices = () => {
   return (
-    <View style={{marginHorizontal: 10, marginTop: 10}}>
+    <View style={{marginHorizontal: 10, marginTop: 15,marginBottom:23}}>
       <Text style={{fontWeight: 'bold', fontSize: 18,color:"black"}}>OurServices</Text>
 
       <View style={{marginTop: 10, flexDirection: 'row'}}>

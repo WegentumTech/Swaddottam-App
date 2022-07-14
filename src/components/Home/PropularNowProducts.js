@@ -9,7 +9,7 @@ const PropularNowProducts = () => {
 
   return (
     
-    <View style={{marginHorizontal: 15, marginTop: 15}}>
+    <View style={{marginHorizontal: 15, marginTop: 35,marginBottom:10}}>
       <View style={{flexDirection: 'row'}}>
         <Text
           style={{flex: 1, fontWeight: 'bold', fontSize: 17, color: 'black'}}>

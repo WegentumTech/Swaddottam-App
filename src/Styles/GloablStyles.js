@@ -4,10 +4,10 @@ import {color} from 'react-native-reanimated';
 
 const styles = StyleSheet.create({
   tinyLogo: {
-    marginTop: '70%',
     width: '100%',
     height: 100,
     marginHorizontal: 5,
+    marginBottom:100
   },
   splashScreenBottomVersion: {
     textAlign: 'center',
@@ -65,10 +65,11 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   slideProduct: {
-    width: 80,
-    height: 80,
+    width:85,
+    height:85,
     borderRadius: 15,
-    margin: 1,
+    margin: 2,
+    elevation:10
   },
   randomFoods: {
     width: 200,
@@ -198,7 +199,9 @@ const styles = StyleSheet.create({
     fontSize:15,
     flex:5,
     borderTopLeftRadius:8,
-    borderBottomLeftRadius:8
+    borderBottomLeftRadius:8,
+    paddingHorizontal: 10,
+    
     
   },
   menuItems: {

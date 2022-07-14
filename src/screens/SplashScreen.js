@@ -14,12 +14,15 @@ const SplashScreen = () => {
   }, []);
 
   return (
-    <View  >
+    <View  style={{flex:1}}>
+      <View style={{flex:1,justifyContent:"center"}} >
+
       <Image
         style={styles.tinyLogo}
         source={require('../assets/img/SplashLogo.png')}
-      />
+        />
       
+        </View>
     </View>
   );
 };

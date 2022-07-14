@@ -21,46 +21,55 @@ const Accordion = () => {
 
   const data = [
     {
+      id: 'erge',
       Question: 'This is the first question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
     },
     {
+      id: '_edhfgrg',
       Question: 'This is the second question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
     },
     {
+      id: '_ersdgg',
       Question: 'This is the third question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
     },
     {
+      id: 'egsdhweeg',
       Question: 'This is the fourth question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
     },
     {
+      id: '_er343gerg',
       Question: 'This is the fifth question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
     },
     {
+      id: 'weewg',
       Question: 'This is the sixth question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
     },
     {
+      id: '_ergsdgerg',
       Question: 'This is the seven question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
     },
     {
+      id: 'affgr',
       Question: 'This is the eight question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
     },
     {
+      id: '_erafasg',
       Question: 'This is the nine question',
       Answer:
         'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabonaut eum minima consequaturntempore cumque quae est etnet in consequuntur voluptatem voluptates aut',
@@ -71,12 +80,11 @@ const Accordion = () => {
     <View style={{marginBottom: 30}}>
       {data.map(hit => {
         return (
-          <View style={{marginTop: 20, marginHorizontal: 10, elevation: 10}}>
+          <View style={{marginTop: 20, marginHorizontal: 10, elevation: 10}} key={hit.id}>
             <TouchableOpacity activeOpacity={1} onPress={handleClick}>
               <View style={{backgroundColor: '#D9D9D9', padding: 10}}>
                 <Text style={{color: 'black'}}>
-                  <AntDesign name={icon} size={18} color="black" /> This is the
-                  header title and this will be shown here
+                  <AntDesign name={icon} size={18} color="black" /> {hit.Question}
                 </Text>
               </View>
             </TouchableOpacity>
@@ -84,16 +92,7 @@ const Accordion = () => {
             {showIt ? (
               <View style={{backgroundColor: '#D9D9D9', padding: 10}}>
                 <Text style={{color: 'black'}}>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                 {hit.Answer}
                 </Text>
               </View>
             ) : (

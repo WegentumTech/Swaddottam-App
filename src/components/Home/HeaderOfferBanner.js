@@ -2,9 +2,23 @@ import {View, Text, Image} from 'react-native';
 import React from 'react';
 import styles from '../../Styles/GloablStyles';
 
+
+
 const HeaderOfferBanner = () => {
+  
+
+
+
+
+
+
+
+
+
+
+
   return (
-    <View style={{marginHorizontal: 10, marginTop: 10}}>
+    <View style={{marginHorizontal: 10, marginTop: 20}}>
       <Image
         style={styles.bannerImage}
         source={{

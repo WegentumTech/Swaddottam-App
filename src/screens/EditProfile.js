@@ -1,14 +1,31 @@
 import {View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import PressBack from '../components/Reusable/PressBack';
 import styles from '../Styles/GloablStyles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
+import RBSheet from 'react-native-raw-bottom-sheet';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+
 
 const EditProfile = () => {
   const [fullName, setFullName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [contactNumber, setContactNumber] = useState('');
+  const refRBSheet = useRef();
+
+  const handleCameraOpen = async () => {
+    console.log('camera clciked');
+    const result = await launchCamera({mediaType:"photo"});
+    console.log(result)
+  };
+  const handleGalleryOpen = async () => {
+    console.log('gallery clciked');
+    const result = await launchImageLibrary({mediaType:"photo"})
+    console.log(result)
+
+  };
 
   return (
     <View>
@@ -22,13 +39,20 @@ const EditProfile = () => {
               uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80',
             }}
           />
+
           <AntDesign
-            style={{position: 'absolute', left: 230, top: 90,backgroundColor:"#FDB416",padding:5,borderRadius:30}}
+            onPress={() => refRBSheet.current.open()}
+            style={{
+              position: 'absolute',
+              left: 230,
+              top: 90,
+              backgroundColor: '#FDB416',
+              padding: 5,
+              borderRadius: 30,
+            }}
             name="camera"
             size={20}
             color="white"
-
-            
           />
         </View>
       </View>
@@ -41,7 +65,6 @@ const EditProfile = () => {
             setFullName({fullName: text});
           }}
           style={styles.simpleInput}
-          
         />
 
         <Text style={{marginHorizontal: 10, color: 'black', marginTop: 12}}>
@@ -53,7 +76,6 @@ const EditProfile = () => {
             setUsername({username: text});
           }}
           style={styles.simpleInput}
-          
         />
 
         <Text style={{marginHorizontal: 10, color: 'black', marginTop: 12}}>
@@ -65,7 +87,6 @@ const EditProfile = () => {
             setEmail({email: text});
           }}
           style={styles.simpleInput}
-          
         />
 
         <Text style={{marginHorizontal: 10, color: 'black', marginTop: 12}}>
@@ -77,7 +98,6 @@ const EditProfile = () => {
             setContactNumber({contactNumber: text});
           }}
           style={styles.simpleInput}
-          
         />
 
         <TouchableOpacity>
@@ -95,6 +115,42 @@ const EditProfile = () => {
           </Text>
         </TouchableOpacity>
       </View>
+
+      <RBSheet
+        animationType="slide"
+        height={130}
+        ref={refRBSheet}
+        closeOnDragDown={true}
+        closeOnPressMask={false}
+        customStyles={{
+          wrapper: {
+            backgroundColor: 'transparent',
+          },
+          draggableIcon: {
+            backgroundColor: '#86868C',
+          },
+        }}>
+        <View
+          style={{marginHorizontal: 10, flexDirection: 'row', marginTop: 20}}>
+          <TouchableOpacity onPress={handleCameraOpen} style={{flex: 1}}>
+            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+              <AntDesign name="camera" size={30} color="black" />
+              <Text style={{fontSize: 18, color: 'black', fontWeight: 'bold'}}>
+                {'   '}Camera
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleGalleryOpen} style={{flex: 1}}>
+            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+              <Entypo name="folder-images" size={30} color="black" />
+              <Text style={{fontSize: 18, color: 'black', fontWeight: 'bold'}}>
+                {'   '}Gallery
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </RBSheet>
     </View>
   );
 };

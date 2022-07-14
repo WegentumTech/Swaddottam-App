@@ -4,7 +4,7 @@ import styles from '../../Styles/GloablStyles';
 
 const OrderTypes = () => {
   return (
-    <View style={{marginHorizontal: 10, marginTop: 10, flexDirection: 'row'}}>
+    <View style={{marginHorizontal: 10, marginTop: 15, flexDirection: 'row',marginBottom:25}}>
       <View style={{flex: 1, alignItems: 'center'}}>
         <View style={styles.orderBack}>
           <Image

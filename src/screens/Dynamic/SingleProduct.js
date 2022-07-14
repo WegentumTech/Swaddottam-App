@@ -17,6 +17,19 @@ const SingleProduct = () => {
   const navigation = useNavigation();
   const [increasenUMBER, setIncreasenUMBER] = useState(1);
 
+
+const handleAddToCart = () =>{
+navigation.navigate('Cart')
+}
+
+
+
+
+
+
+
+
+
   return (
     <ScrollView>
       <View>
@@ -73,7 +86,7 @@ const SingleProduct = () => {
                   padding: 8,
                   fontSize: 20,
                   fontWeight: 'bold',
-                  backgroundColor: '#757272',
+                  backgroundColor: '#F58224',
                   color: 'white',
                 }}>
                 -
@@ -88,7 +101,7 @@ const SingleProduct = () => {
                     padding: 8,
                     fontSize: 20,
                     fontWeight: 'bold',
-                    backgroundColor: '#757272',
+                    backgroundColor: '#F58224',
                     color: 'white',
                   }}>
                   -
@@ -115,7 +128,7 @@ const SingleProduct = () => {
                 padding: 8,
                 fontSize: 20,
                 fontWeight: 'bold',
-                backgroundColor: '#757272',
+                backgroundColor: '#F58224',
                 color: 'white',
               }}>
               +
@@ -123,14 +136,14 @@ const SingleProduct = () => {
           </TouchableOpacity>
         </View>
         <View style={{flex: 1}}>
-          <TouchableOpacity onPress={()=>navigation.navigate("Cart")} >
+          <TouchableOpacity onPress={handleAddToCart}>
             <Text
               style={{
                 alignSelf: 'flex-end',
                 fontWeight: 'bold',
                 fontSize: 20,
                 padding: 8,
-                backgroundColor: '#757272',
+                backgroundColor: '#F58224',
                 borderRadius: 5,
                 color: 'white',
               }}>
@@ -146,16 +159,16 @@ const SingleProduct = () => {
           style={styles.CheckZipCode}
           placeholder="check availability at eg:221010"
           placeholderTextColor="#BAB6B6"
-        />
+          maxLength={6}></TextInput>
         <TouchableOpacity>
           <Text
             style={{
               flex: 1,
-              backgroundColor: '#FDB416',
+              backgroundColor: '#F58224',
               borderBottomRightRadius: 5,
               borderTopRightRadius: 5,
               padding: 10,
-              color: 'black',
+              color: 'white',
               fontWeight: 'bold',
               fontSize: 14,
             }}>

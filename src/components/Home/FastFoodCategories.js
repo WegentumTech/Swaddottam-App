@@ -8,7 +8,7 @@ const FastFoodCategories = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={{marginHorizontal: 15, marginTop: 10}}>
+    <View style={{marginHorizontal: 15, marginTop: 10,marginBottom:25}}>
       <View style={{flexDirection: 'row'}}>
         <Text
           style={{flex: 2, fontWeight: 'bold', fontSize: 17, color: 'black'}}>
