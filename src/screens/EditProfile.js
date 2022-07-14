@@ -7,8 +7,8 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
-
 const EditProfile = () => {
+  const [imageLink, setImageLink] = useState('');
   const [fullName, setFullName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -17,13 +17,15 @@ const EditProfile = () => {
 
   const handleCameraOpen = async () => {
     console.log('camera clciked');
-    const result = await launchCamera({mediaType:"photo"});
-    console.log(result)
+    const result = await launchCamera({mediaType: 'photo'});
+    console.log(result);
+    setImageLink(result.assets[0].uri);
   };
   const handleGalleryOpen = async () => {
     console.log('gallery clciked');
-    const result = await launchImageLibrary({mediaType:"photo"})
-    console.log(result)
+    const result = await launchImageLibrary({mediaType: 'photo'});
+    console.log(result);
+    setImageLink(result.assets[0].uri);
 
   };
 
@@ -33,12 +35,25 @@ const EditProfile = () => {
 
       <View>
         <View style={{alignItems: 'center'}}>
-          <Image
-            style={styles.EditUserProfileIcon}
-            source={{
-              uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80',
-            }}
-          />
+          {imageLink ? (
+            <>
+              <Image
+                style={styles.EditUserProfileIcon}
+                source={{
+                  uri: imageLink,
+                }}
+              />
+            </>
+          ) : (
+            <>
+              <Image
+                style={styles.EditUserProfileIcon}
+                source={{
+                  uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80',
+                }}
+              />
+            </>
+          )}
 
           <AntDesign
             onPress={() => refRBSheet.current.open()}
