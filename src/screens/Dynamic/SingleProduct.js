@@ -53,20 +53,8 @@ const SingleProduct = () => {
            parsedValue.forEach(element => {
 
             product.push(element);
-
-
             
            });
-
-
-
-
-
-
-
-
-
-
 
             product.push(items);
             AsyncStorage.setItem(
