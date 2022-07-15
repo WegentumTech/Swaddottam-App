@@ -52,15 +52,7 @@ function DrawerNavigation(props) {
         }}
       />
 
-      <Drawer.Screen
-        name="Menu"
-        component={Menu}
-        options={{
-          drawerIcon: ({color}) => (
-            <MaterialIcons name="restaurant-menu" size={24} color={color} />
-          ),
-        }}
-      />
+      
       <Drawer.Screen
         name="Orders"
         component={Orders}

@@ -22,11 +22,11 @@ const Cart = () => {
 
 
 
-  const handleRemove = async() =>{
+  const handleRemove = async(ids) =>{
 
     const localValue = await AsyncStorage.getItem("Cart")
     const parseLocalValue = JSON.parse(localValue)
-    let id = "go44"
+    let id = ids
     const arr = parseLocalValue.filter(item => item.id !== id)
     console.log(arr)
 
@@ -50,7 +50,7 @@ const Cart = () => {
           <>
             {datas.map(hit => {
               return (
-                <TouchableOpacity onPress={handleRemove}>
+                <TouchableOpacity onPress={()=>handleRemove(hit.id)}>
                 <View style={{marginTop: 22}}>
                   <View style={{flexDirection: 'row'}}>
                     <View style={{flex: 1}}>
