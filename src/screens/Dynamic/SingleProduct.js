@@ -16,19 +16,20 @@ import RandomScrollableFoods from '../../components/Home/RandomScrollableFoods';
 const SingleProduct = () => {
   const navigation = useNavigation();
   const [increasenUMBER, setIncreasenUMBER] = useState(1);
+  const [showRedHeart, setShowRedHeart] = useState(false);
 
+  const handleAddToCart = () => {
+    navigation.navigate('Cart');
+  };
 
-const handleAddToCart = () =>{
-navigation.navigate('Cart')
-}
-
-
-
-
-
-
-
-
+  const clickedOnHeart = () => {
+    if (showRedHeart) {
+      setShowRedHeart(false);
+    }
+    if (!showRedHeart) {
+      setShowRedHeart(true);
+    }
+  };
 
   return (
     <ScrollView>
@@ -135,7 +136,7 @@ navigation.navigate('Cart')
             </Text>
           </TouchableOpacity>
         </View>
-        <View style={{flex: 1}}>
+        <View style={{flex: 7}}>
           <TouchableOpacity onPress={handleAddToCart}>
             <Text
               style={{
@@ -149,6 +150,25 @@ navigation.navigate('Cart')
               }}>
               Add To Cart
             </Text>
+          </TouchableOpacity>
+        </View>
+        <View style={{flex: 1}}>
+          <TouchableOpacity onPress={clickedOnHeart}>
+            {showRedHeart ? (
+              <AntDesign
+                style={{marginLeft: 8, marginTop: 6}}
+                name="heart"
+                size={30}
+                color="red"
+              />
+            ) : (
+              <AntDesign
+                style={{marginLeft: 8, marginTop: 6}}
+                name="hearto"
+                size={30}
+                color="black"
+              />
+            )}
           </TouchableOpacity>
         </View>
       </View>

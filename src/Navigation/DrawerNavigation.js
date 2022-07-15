@@ -13,6 +13,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import Wishlist from '../screens/Wishlist';
 
 const Drawer = createDrawerNavigator();
 
@@ -102,6 +104,15 @@ function DrawerNavigation(props) {
         options={{
           drawerIcon: ({color}) => (
             <FontAwesome name="slideshare" size={24} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Wishlist"
+        component={Wishlist}
+        options={{
+          drawerIcon: ({color}) => (
+            <Fontisto name="heart" size={24} color={color} />
           ),
         }}
       />

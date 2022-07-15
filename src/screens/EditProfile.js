@@ -136,7 +136,7 @@ const EditProfile = () => {
         height={130}
         ref={refRBSheet}
         closeOnDragDown={true}
-        closeOnPressMask={false}
+        closeOnPressMask={true}
         customStyles={{
           wrapper: {
             backgroundColor: 'transparent',

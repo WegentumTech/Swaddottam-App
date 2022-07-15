@@ -56,7 +56,7 @@ const PropularNowProducts = () => {
                     style={{marginTop: 8}}
                     name="star"
                     size={20}
-                    color="#314C1C"
+                    color="#FDB416"
                   />
                   {''} CORN DO PYAZA
                 </Text>
@@ -99,7 +99,7 @@ const PropularNowProducts = () => {
                   style={{marginTop: 8}}
                   name="star"
                   size={20}
-                  color="#314C1C"
+                  color="#FDB416"
                 />
                 {''} CORN DO PYAZA
               </Text>
@@ -139,7 +139,7 @@ const PropularNowProducts = () => {
                   style={{marginTop: 8}}
                   name="star"
                   size={20}
-                  color="#314C1C"
+                  color="#FDB416"
                 />
                 {''} CORN DO PYAZA
               </Text>
@@ -179,7 +179,7 @@ const PropularNowProducts = () => {
                   style={{marginTop: 8}}
                   name="star"
                   size={20}
-                  color="#314C1C"
+                  color="#FDB416"
                 />
                 {''} CORN DO PYAZA
               </Text>

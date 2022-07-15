@@ -14,7 +14,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import RandomScrollableFoods from '../../components/Home/RandomScrollableFoods';
 
 const SingleOrder = () => {
-  const [currentStatus, setCurrentStatus] = useState(2);
+  const [currentStatus, setCurrentStatus] = useState(3);
 
   const labels = ['Registered', 'Cooking', 'On The Way', 'Delivered'];
   const customStyles = {
@@ -48,8 +48,7 @@ const SingleOrder = () => {
         <View style={{marginHorizontal: 10, marginTop: 20}}>
           <View>
             <View style={{marginTop: 22}}>
-              <TouchableOpacity
-                onPress={() => navigation.navigate('SingleOrderScreen')}>
+             
                 <View style={{flexDirection: 'row'}}>
                   <View style={{flex: 1}}>
                     <Image
@@ -88,7 +87,6 @@ const SingleOrder = () => {
                     </View>
                   </View>
                 </View>
-              </TouchableOpacity>
             </View>
 
             <View>
@@ -196,7 +194,7 @@ const SingleOrder = () => {
         </View>
       </ScrollView>
 
-      <View style={{flex: 0, justifyContent: 'flex-end', marginBottom: 10}}>
+      {/* <View style={{flex: 0, justifyContent: 'flex-end', marginBottom: 10}}>
         {currentStatus !== 3 ? (
           <>
             <Text
@@ -216,7 +214,7 @@ const SingleOrder = () => {
         ) : (
           <></>
         )}
-      </View>
+      </View> */}
     </View>
   );
 };

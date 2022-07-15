@@ -6,7 +6,7 @@ const RandomScrollableFoods = () => {
   return (
     <ScrollView
       horizontal={true}
-      showsHorizontalScrollIndicator={true}
+      showsHorizontalScrollIndicator={false}
       style={{marginTop: 18, marginBottom: 30}}>
       <View>
         <Image
