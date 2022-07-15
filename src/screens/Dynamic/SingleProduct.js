@@ -28,14 +28,13 @@ const SingleProduct = () => {
   }, []);
 
   const handleAddToCart = async () => {
-    // navigation.navigate('Cart');
 
     try {
-      var product = [];
+      var product = [];  // <== here initializing and empty array
 
-      var items = {
-        id: 'go',
-        title: 'This is new product',
+      var items = {  // <== This is a demo item object where we are saving demo data
+        id: 'go44',
+        title: 'Handi Paneer',
         image: 'jfhwkjfhwkefhwefwe.url',
         price: 786,
         description: 'this is the description of this product',
@@ -62,8 +61,10 @@ const SingleProduct = () => {
               JSON.stringify(product),
               // console.log('item added' + JSON.stringify(product)),
             );
-            alert(product);
+            // alert(product);
             console.log(product)
+             navigation.navigate('Cart');
+
             // console.log(product);
           };
           getValue();
