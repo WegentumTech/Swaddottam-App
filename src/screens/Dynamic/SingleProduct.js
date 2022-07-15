@@ -7,19 +7,83 @@ import {
   TextInput,
   Alert,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from '../../Styles/GloablStyles';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/native';
 import RandomScrollableFoods from '../../components/Home/RandomScrollableFoods';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SingleProduct = () => {
   const navigation = useNavigation();
   const [increasenUMBER, setIncreasenUMBER] = useState(1);
   const [showRedHeart, setShowRedHeart] = useState(false);
 
-  const handleAddToCart = () => {
-    navigation.navigate('Cart');
+  useEffect(() => {
+    const getInital = async () => {
+      const value = await AsyncStorage.getItem('Cart');
+      console.log(value);
+    };
+    getInital();
+  }, []);
+
+  const handleAddToCart = async () => {
+    // navigation.navigate('Cart');
+
+    try {
+      var product = [];
+
+      var items = {
+        id: 'go',
+        title: 'This is new product',
+        image: 'jfhwkjfhwkefhwefwe.url',
+        price: 786,
+        description: 'this is the description of this product',
+        categoryTitle: 'new product',
+      };
+
+      AsyncStorage.getItem('Cart', (err, res) => {
+        if (!res) {
+          alert('empty cart');
+          AsyncStorage.setItem('Cart', JSON.stringify([product]));
+        } else {
+          const getValue = async () => {
+            const value = await AsyncStorage.getItem('Cart');
+           const parsedValue = JSON.parse(value);
+           parsedValue.forEach(element => {
+
+            product.push(element);
+
+
+            
+           });
+
+
+
+
+
+
+
+
+
+
+
+            product.push(items);
+            AsyncStorage.setItem(
+              'Cart',
+              JSON.stringify(product),
+              // console.log('item added' + JSON.stringify(product)),
+            );
+            alert(product);
+            console.log(product)
+            // console.log(product);
+          };
+          getValue();
+        }
+      });
+    } catch (error) {
+      // console.log(error);
+    }
   };
 
   const clickedOnHeart = () => {
@@ -57,29 +121,29 @@ const SingleProduct = () => {
         />
       </View>
       <View style={{marginHorizontal: 20, marginTop: 20}}>
-        <View style={{flex:1,flexDirection:"row"}} >
-        <Text style={{fontSize: 25, fontWeight: 'bold', color: 'black',}}>
-          HANDI PANEER
-        </Text>
-        <View style={{flex: 1,alignItems:"flex-end"}}>
-          <TouchableOpacity onPress={clickedOnHeart}>
-            {showRedHeart ? (
-              <AntDesign
-                style={{marginLeft: 8, marginTop: 6}}
-                name="heart"
-                size={30}
-                color="red"
-              />
-            ) : (
-              <AntDesign
-                style={{marginLeft: 8, marginTop: 6}}
-                name="hearto"
-                size={30}
-                color="black"
-              />
-            )}
-          </TouchableOpacity>
-        </View>
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <Text style={{fontSize: 25, fontWeight: 'bold', color: 'black'}}>
+            HANDI PANEER
+          </Text>
+          <View style={{flex: 1, alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={clickedOnHeart}>
+              {showRedHeart ? (
+                <AntDesign
+                  style={{marginLeft: 8, marginTop: 6}}
+                  name="heart"
+                  size={30}
+                  color="red"
+                />
+              ) : (
+                <AntDesign
+                  style={{marginLeft: 8, marginTop: 6}}
+                  name="hearto"
+                  size={30}
+                  color="black"
+                />
+              )}
+            </TouchableOpacity>
+          </View>
         </View>
         <Text
           style={{
@@ -173,7 +237,6 @@ const SingleProduct = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        
       </View>
 
       <View style={{marginHorizontal: 20, flexDirection: 'row', marginTop: 30}}>
