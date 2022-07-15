@@ -57,9 +57,30 @@ const SingleProduct = () => {
         />
       </View>
       <View style={{marginHorizontal: 20, marginTop: 20}}>
-        <Text style={{fontSize: 25, fontWeight: 'bold', color: 'black'}}>
+        <View style={{flex:1,flexDirection:"row"}} >
+        <Text style={{fontSize: 25, fontWeight: 'bold', color: 'black',}}>
           HANDI PANEER
         </Text>
+        <View style={{flex: 1,alignItems:"flex-end"}}>
+          <TouchableOpacity onPress={clickedOnHeart}>
+            {showRedHeart ? (
+              <AntDesign
+                style={{marginLeft: 8, marginTop: 6}}
+                name="heart"
+                size={30}
+                color="red"
+              />
+            ) : (
+              <AntDesign
+                style={{marginLeft: 8, marginTop: 6}}
+                name="hearto"
+                size={30}
+                color="black"
+              />
+            )}
+          </TouchableOpacity>
+        </View>
+        </View>
         <Text
           style={{
             fontSize: 20,
@@ -136,7 +157,7 @@ const SingleProduct = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        <View style={{flex: 7}}>
+        <View style={{flex: 1}}>
           <TouchableOpacity onPress={handleAddToCart}>
             <Text
               style={{
@@ -152,25 +173,7 @@ const SingleProduct = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        <View style={{flex: 1}}>
-          <TouchableOpacity onPress={clickedOnHeart}>
-            {showRedHeart ? (
-              <AntDesign
-                style={{marginLeft: 8, marginTop: 6}}
-                name="heart"
-                size={30}
-                color="red"
-              />
-            ) : (
-              <AntDesign
-                style={{marginLeft: 8, marginTop: 6}}
-                name="hearto"
-                size={30}
-                color="black"
-              />
-            )}
-          </TouchableOpacity>
-        </View>
+        
       </View>
 
       <View style={{marginHorizontal: 20, flexDirection: 'row', marginTop: 30}}>
