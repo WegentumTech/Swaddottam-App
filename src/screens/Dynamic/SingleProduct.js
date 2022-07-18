@@ -27,18 +27,25 @@ const SingleProduct = () => {
     getInital();
   }, []);
 
-  const handleAddToCart = async () => {
-
+  const handleAddToCart = async (
+    id,
+    title,
+    image,
+    price,
+    desciption,
+    quantity,
+  ) => {
     try {
-      var product = [];  // <== here initializing and empty array
+      var product = []; // <== here initializing and empty array
 
-      var items = {  // <== This is a demo item object where we are saving demo data
-        id: 'go44',
-        title: 'Handi Paneer',
-        image: 'jfhwkjfhwkefhwefwe.url',
-        price: 786,
-        description: 'this is the description of this product',
-        categoryTitle: 'new product',
+      var items = {
+        // <== This is a demo item object where we are saving demo data
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        description: desciption,
+        quantity: quantity,
       };
 
       AsyncStorage.getItem('Cart', (err, res) => {
@@ -48,13 +55,11 @@ const SingleProduct = () => {
         } else {
           const getValue = async () => {
             const value = await AsyncStorage.getItem('Cart');
-           const parsedValue = JSON.parse(value);
-           parsedValue.forEach(element => {
-
-            product.push(element);
-            
-           });
-
+            const parsedValue = JSON.parse(value);
+            parsedValue.forEach(element => {
+              product.push(element);
+            });
+ 
             product.push(items);
             AsyncStorage.setItem(
               'Cart',
@@ -62,8 +67,8 @@ const SingleProduct = () => {
               // console.log('item added' + JSON.stringify(product)),
             );
             // alert(product);
-            console.log(product)
-             navigation.navigate('Cart');
+            console.log(product);
+            navigation.navigate('Cart');
 
             // console.log(product);
           };
@@ -211,7 +216,17 @@ const SingleProduct = () => {
           </TouchableOpacity>
         </View>
         <View style={{flex: 1}}>
-          <TouchableOpacity onPress={handleAddToCart}>
+          <TouchableOpacity
+            onPress={() =>
+              handleAddToCart(
+                'go44',
+                'Handi Paneer',
+                'https://img.freepik.com/premium-photo/big-hamburger-with-double-beef-french-fries_252907-8.jpg?w=2000',
+                '786',
+                'this is demo desc',
+                increasenUMBER,
+              )
+            }>
             <Text
               style={{
                 alignSelf: 'flex-end',
