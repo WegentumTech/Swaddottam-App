@@ -28,6 +28,19 @@ const VerifyOTP = () => {
     const UserNumber = route.params.Number;
     console.log(UserNumber);
     setEnteredNumber(UserNumber);
+
+    const gotOtp = route.params.ReveviedOtp;
+    console.log(gotOtp)
+
+
+
+
+
+
+
+
+
+
     handleStartTimer();
   }, []);
 
