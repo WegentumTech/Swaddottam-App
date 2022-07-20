@@ -1,4 +1,4 @@
-import {View, Text, Image, TouchableOpacity,Alert} from 'react-native';
+import {View, Text, Image, TouchableOpacity,Alert,ScrollView} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import styles from '../../Styles/GloablStyles';
 import {useNavigation} from '@react-navigation/native';

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "823891868351",
+    "project_id": "subtle-app-356111",
+    "storage_bucket": "subtle-app-356111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823891868351:android:63a716ae6e5c2a1738240a",
+        "android_client_info": {
+          "package_name": "com.swaddottamapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823891868351-s2otikum14gos61i3dtkaqn0m7mb93tn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmqgRjgSJWsmI_dzBE4O0HNH4DUJ0bJi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823891868351-s2otikum14gos61i3dtkaqn0m7mb93tn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
