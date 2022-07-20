@@ -25,23 +25,25 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <ScrollView
-      refreshControl={
-        <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-      }>
-      <TopHeader />
-      <SearchBox />
-      <Tags />
-      <HeaderOfferBanner />
-      <PropularNowProducts />
-      <ScrollCategories />
-      <FastFoodCategories />
-      <OrderTypes />
-      <RandomScrollableFoods />
-      <OurServices />
-      <RecommendedForYou />
-      <Footer />
-    </ScrollView>
+    <>
+      <ScrollView
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }>
+        <TopHeader />
+        <SearchBox />
+        <Tags />
+        <HeaderOfferBanner />
+        <PropularNowProducts />
+        <ScrollCategories />
+        <FastFoodCategories />
+        {/* <OrderTypes /> */}
+        <RandomScrollableFoods />
+        {/* <OurServices /> */}
+        <RecommendedForYou />
+        <Footer />
+      </ScrollView>
+    </>
   );
 };
 

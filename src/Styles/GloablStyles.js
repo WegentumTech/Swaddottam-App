@@ -63,13 +63,15 @@ const styles = StyleSheet.create({
     height: 150,
     marginHorizontal: 5,
     borderRadius: 15,
+    elevation:10
+    
   },
   slideProduct: {
     width:85,
     height:85,
     borderRadius: 15,
     margin: 2,
-    elevation:10
+ 
   },
   randomFoods: {
     width: 200,

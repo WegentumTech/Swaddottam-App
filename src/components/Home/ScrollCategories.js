@@ -8,7 +8,7 @@ const ScrollCategories = () => {
 
   return (
     <View style={{marginTop: 20, marginBottom: 20}}>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+      <ScrollView scrollEventThrottle={20} horizontal={true} showsHorizontalScrollIndicator={false} pagingEnabled>
         <TouchableOpacity onPress={() => navigation.navigate('Categories')}>
           <Image
             style={styles.slideProduct}

@@ -8,8 +8,7 @@ const PropularNowProducts = () => {
   const navigation = useNavigation();
 
   return (
-    
-    <View style={{marginHorizontal: 15, marginTop: 35,marginBottom:10}}>
+    <View style={{marginHorizontal: 15, marginTop: 35, marginBottom: 10,elevation:10}}>
       <View style={{flexDirection: 'row'}}>
         <Text
           style={{flex: 1, fontWeight: 'bold', fontSize: 17, color: 'black'}}>
@@ -34,6 +33,7 @@ const PropularNowProducts = () => {
           </Text>
         </TouchableOpacity>
       </View>
+
       <TouchableOpacity
         onPress={() => navigation.navigate('SingleProductScreen')}>
         <View style={{marginTop: 22}}>
@@ -48,9 +48,9 @@ const PropularNowProducts = () => {
             </View>
 
             <View style={{flex: 2}}>
-              <View style={{marginLeft: 20}}>
+              <View style={{marginLeft: 15}}>
                 <Text
-                  style={{fontWeight: 'bold', fontSize: 20, color: 'black'}}>
+                  style={{fontWeight: 'bold', fontSize: 15, color: '#4c4c4c'}}>
                   {' '}
                   <Entypo
                     style={{marginTop: 8}}
@@ -60,17 +60,24 @@ const PropularNowProducts = () => {
                   />
                   {''} CORN DO PYAZA
                 </Text>
-                <Text style={{marginLeft: 5, color: 'black'}}>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard
+                <Text style={{marginLeft: 5, color: '#4c4c4c'}}>
+                  Lorem Ipsum is simply dummy text of the printing and some more
+                  data.
                 </Text>
+
+                <View
+                  style={{
+                    backgroundColor: '#4c4c4c',
+                    padding: 0.5,
+                    marginHorizontal: 10,
+                    marginVertical: 10,
+                  }}></View>
                 <Text
                   style={{
                     fontWeight: 'bold',
                     marginLeft: 5,
                     fontSize: 18,
-                    color: 'black',
+                    color: '#4c4c4c',
                   }}>
                   ₹200
                 </Text>
@@ -79,127 +86,214 @@ const PropularNowProducts = () => {
           </View>
         </View>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SingleProductScreen')}>
+        <View style={{marginTop: 22}}>
+          <View style={{flexDirection: 'row'}}>
+            <View style={{flex: 1}}>
+              <Image
+                style={styles.sideProduct}
+                source={{
+                  uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
+                }}
+              />
+            </View>
 
-      <View style={{marginTop: 22}}>
-        <View style={{flexDirection: 'row'}}>
-          <View style={{flex: 1}}>
-            <Image
-              style={styles.sideProduct}
-              source={{
-                uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
-              }}
-            />
-          </View>
+            <View style={{flex: 2}}>
+              <View style={{marginLeft: 15}}>
+                <Text
+                  style={{fontWeight: 'bold', fontSize: 15, color: '#4c4c4c'}}>
+                  {' '}
+                  <Entypo
+                    style={{marginTop: 8}}
+                    name="star"
+                    size={20}
+                    color="#FDB416"
+                  />
+                  {''} CORN DO PYAZA
+                </Text>
+                <Text style={{marginLeft: 5, color: '#4c4c4c'}}>
+                  Lorem Ipsum is simply dummy text of the printing and some more
+                  data.
+                </Text>
 
-          <View style={{flex: 2}}>
-            <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20, color: 'black'}}>
-                {' '}
-                <Entypo
-                  style={{marginTop: 8}}
-                  name="star"
-                  size={20}
-                  color="#FDB416"
-                />
-                {''} CORN DO PYAZA
-              </Text>
-              <Text style={{marginLeft: 5, color: 'black'}}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard
-              </Text>
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                  marginLeft: 5,
-                  fontSize: 18,
-                  color: 'black',
-                }}>
-                ₹200
-              </Text>
+                <View
+                  style={{
+                    backgroundColor: '#4c4c4c',
+                    padding: 0.5,
+                    marginHorizontal: 10,
+                    marginVertical: 10,
+                  }}></View>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    marginLeft: 5,
+                    fontSize: 18,
+                    color: '#4c4c4c',
+                  }}>
+                  ₹200
+                </Text>
+              </View>
             </View>
           </View>
         </View>
-      </View>
-      <View style={{marginTop: 22}}>
-        <View style={{flexDirection: 'row'}}>
-          <View style={{flex: 1}}>
-            <Image
-              style={styles.sideProduct}
-              source={{
-                uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
-              }}
-            />
-          </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SingleProductScreen')}>
+        <View style={{marginTop: 22}}>
+          <View style={{flexDirection: 'row'}}>
+            <View style={{flex: 1}}>
+              <Image
+                style={styles.sideProduct}
+                source={{
+                  uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
+                }}
+              />
+            </View>
 
-          <View style={{flex: 2}}>
-            <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20, color: 'black'}}>
-                {' '}
-                <Entypo
-                  style={{marginTop: 8}}
-                  name="star"
-                  size={20}
-                  color="#FDB416"
-                />
-                {''} CORN DO PYAZA
-              </Text>
-              <Text style={{marginLeft: 5, color: 'black'}}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard
-              </Text>
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                  marginLeft: 5,
-                  fontSize: 18,
-                  color: 'black',
-                }}>
-                ₹200
-              </Text>
+            <View style={{flex: 2}}>
+              <View style={{marginLeft: 15}}>
+                <Text
+                  style={{fontWeight: 'bold', fontSize: 15, color: '#4c4c4c'}}>
+                  {' '}
+                  <Entypo
+                    style={{marginTop: 8}}
+                    name="star"
+                    size={20}
+                    color="#FDB416"
+                  />
+                  {''} CORN DO PYAZA
+                </Text>
+                <Text style={{marginLeft: 5, color: '#4c4c4c'}}>
+                  Lorem Ipsum is simply dummy text of the printing and some more
+                  data.
+                </Text>
+
+                <View
+                  style={{
+                    backgroundColor: '#4c4c4c',
+                    padding: 0.5,
+                    marginHorizontal: 10,
+                    marginVertical: 10,
+                  }}></View>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    marginLeft: 5,
+                    fontSize: 18,
+                    color: '#4c4c4c',
+                  }}>
+                  ₹200
+                </Text>
+              </View>
             </View>
           </View>
         </View>
-      </View>
-      <View style={{marginTop: 22}}>
-        <View style={{flexDirection: 'row'}}>
-          <View style={{flex: 1}}>
-            <Image
-              style={styles.sideProduct}
-              source={{
-                uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
-              }}
-            />
-          </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SingleProductScreen')}>
+        <View style={{marginTop: 22}}>
+          <View style={{flexDirection: 'row'}}>
+            <View style={{flex: 1}}>
+              <Image
+                style={styles.sideProduct}
+                source={{
+                  uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
+                }}
+              />
+            </View>
 
-          <View style={{flex: 2}}>
-            <View style={{marginLeft: 20}}>
-              <Text style={{fontWeight: 'bold', fontSize: 20, color: 'black'}}>
-                {' '}
-                <Entypo
-                  style={{marginTop: 8}}
-                  name="star"
-                  size={20}
-                  color="#FDB416"
-                />
-                {''} CORN DO PYAZA
-              </Text>
-              <Text style={{marginLeft: 5, color: 'black'}}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard
-              </Text>
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                  marginLeft: 5,
-                  fontSize: 18,
-                  color: 'black',
-                }}>
-                ₹200
-              </Text>
+            <View style={{flex: 2}}>
+              <View style={{marginLeft: 15}}>
+                <Text
+                  style={{fontWeight: 'bold', fontSize: 15, color: '#4c4c4c'}}>
+                  {' '}
+                  <Entypo
+                    style={{marginTop: 8}}
+                    name="star"
+                    size={20}
+                    color="#FDB416"
+                  />
+                  {''} CORN DO PYAZA
+                </Text>
+                <Text style={{marginLeft: 5, color: '#4c4c4c'}}>
+                  Lorem Ipsum is simply dummy text of the printing and some more
+                  data.
+                </Text>
+
+                <View
+                  style={{
+                    backgroundColor: '#4c4c4c',
+                    padding: 0.5,
+                    marginHorizontal: 10,
+                    marginVertical: 10,
+                  }}></View>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    marginLeft: 5,
+                    fontSize: 18,
+                    color: '#4c4c4c',
+                  }}>
+                  ₹200
+                </Text>
+              </View>
             </View>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('SingleProductScreen')}>
+        <View style={{marginTop: 22}}>
+          <View style={{flexDirection: 'row'}}>
+            <View style={{flex: 1}}>
+              <Image
+                style={styles.sideProduct}
+                source={{
+                  uri: 'https://images.unsplash.com/photo-1502998070258-dc1338445ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80',
+                }}
+              />
+            </View>
+
+            <View style={{flex: 2}}>
+              <View style={{marginLeft: 15}}>
+                <Text
+                  style={{fontWeight: 'bold', fontSize: 15, color: '#4c4c4c'}}>
+                  {' '}
+                  <Entypo
+                    style={{marginTop: 8}}
+                    name="star"
+                    size={20}
+                    color="#FDB416"
+                  />
+                  {''} CORN DO PYAZA
+                </Text>
+                <Text style={{marginLeft: 5, color: '#4c4c4c'}}>
+                  Lorem Ipsum is simply dummy text of the printing and some more
+                  data.
+                </Text>
+
+                <View
+                  style={{
+                    backgroundColor: '#4c4c4c',
+                    padding: 0.5,
+                    marginHorizontal: 10,
+                    marginVertical: 10,
+                  }}></View>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    marginLeft: 5,
+                    fontSize: 18,
+                    color: '#4c4c4c',
+                  }}>
+                  ₹200
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

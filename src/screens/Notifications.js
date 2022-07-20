@@ -3,8 +3,10 @@ import React from 'react';
 import PressBackWithTitle from '../components/Reusable/PressBackWithTitle';
 import styles from '../Styles/GloablStyles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import { useNavigation } from '@react-navigation/native';
 const Notifications = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={{flex: 1}}>
       <PressBackWithTitle title="Notifications" />
@@ -45,6 +47,8 @@ const Notifications = () => {
           {'       '}You don't have any notifications currently
         </Text>
       </View>
+
+
     </View>
   );
 };

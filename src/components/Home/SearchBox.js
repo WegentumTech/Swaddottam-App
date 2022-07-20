@@ -8,7 +8,7 @@ const SearchBox = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={{marginHorizontal: 10, marginTop: 12}}>
+    <View style={{marginHorizontal: 10, marginTop: 16,marginBottom:4}}>
       <Text
         onPress={() => navigation.navigate('SearchScreen')}
         style={styles.searchBoxUI}>
