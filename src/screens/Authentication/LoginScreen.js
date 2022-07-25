@@ -1,18 +1,74 @@
-import {View, Text, TextInput, TouchableOpacity} from 'react-native';
+import {View, Text, TextInput, TouchableOpacity,Alert} from 'react-native';
 import React, {useState} from 'react';
 import styles from '../../Styles/GloablStyles';
 import VerifyOTP from './VerifyOTP';
 import { useNavigation } from '@react-navigation/native';
 import Entypo from 'react-native-vector-icons/Entypo';
+import axios from "axios"
+import {BACKEND_URL} from "../../helper/baseUrl"
+import {AuthKey} from "../../helper/baseUrl"
+import {AuthPassword} from "../../helper/baseUrl"
 
 const LoginScreen = () => {
   const [mobileNumber, setMobileNumber] = useState('');
   const navigation = useNavigation();
+  const [message, setMessage] = useState(null)
+  const [otp, setOtp] = useState()
+  const [status, setStatus] = useState(null)
 
 
   const handlePressLogin = () => {
-    // console.log(mobileNumber.mobileNumber);
-    navigation.navigate("VerifyOTP", {Number: mobileNumber.mobileNumber})
+   const final_num = (mobileNumber.mobileNumber.replace(/ /g,''));
+   console.log(final_num)
+
+
+  if (final_num.length < 10) {
+    return setMessage("Please Recheck Your Number And Try Again")
+    
+  }else{
+    setMessage("")
+
+
+
+    const headers = {
+      authkey: AuthKey,
+      secretkey: AuthPassword,
+    };
+
+    axios
+      .post(BACKEND_URL + 'getotp', {
+        "mobile":final_num
+
+
+      }, headers)
+      .then(acc => {
+        console.log(acc.data);
+        // setDatas(acc.data);
+        setOtp(acc.data.otp)
+        if(acc.data.status === true){
+
+          navigation.navigate("VerifyOTP", {Number: mobileNumber.mobileNumber,ReveviedOtp:acc.data.otp})
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
+
+
+
+
+
+
+    
+       
+
+
+
+
+
+
   };
 
   return (
@@ -31,6 +87,13 @@ const LoginScreen = () => {
             defaultValue="+91 "
             maxLength={14}
           />
+
+        <Text style={{textAlign:"center",color:"red"}} >{message ? message :""}</Text>
+
+
+
+
+
           <TouchableOpacity onPress={handlePressLogin}>
             <Text style={styles.button}>Get OTP<Entypo
             style={{marginTop: 8}}
